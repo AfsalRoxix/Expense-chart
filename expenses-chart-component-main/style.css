@@ -1,0 +1,150 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+:root {
+    /*## Colors*/
+
+
+    --soft-red: hsl(10, 79%, 65%);
+    --cyan: hsl(186, 34%, 60%);
+
+
+    --dark-brown: hsl(25, 47%, 15%);
+    --medium-brown: hsl(28, 10%, 53%);
+    --cream: hsl(27, 66%, 92%);
+    --very-pale-orange: hsl(33, 100%, 98%);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100svh;
+    background: var(--cream);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+}
+
+.wrapper {
+    width: 28rem;
+}
+
+.balance-container {
+    display: flex;
+    justify-content: space-between;
+    background: var(--soft-red);
+    align-items: center;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    color: var(--very-pale-orange);
+}
+
+.balance-amount div:nth-child(1) {
+    font-size: 0.75rem;
+}
+
+.balance-amount div:nth-child(2) {
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+main {
+    background: white;
+    padding: 1.5rem 1.5rem 0 1.5rem;
+    margin-top: 1rem;
+    border-radius: 1rem;
+}
+
+h1 {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    margin: 2rem 0;
+}
+
+.graph {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 200px;
+}
+
+.bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 12%;
+    height: 100%;
+}
+
+.percent {
+    position: relative;
+    height: 50%;
+    background: var(--soft-red);
+    border-radius: 0.5rem;
+}
+
+.total_hover {
+    position: absolute;
+    display: none;
+    top: -1.75rem;
+    font-size: 1rem;
+    background: var(--dark-brown);
+    color: var(--very-pale-orange);
+    padding: 0.2rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.percent:hover .total_hover {
+    display: block;
+}
+
+.label {
+    width: 100%;
+    text-align: center;
+    color: var(--medium-brown);
+}
+
+.total-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5rem 0;
+    border-top: solid 1px var(--cream);
+    padding: 3rem 0;
+}
+
+.total {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    color: var(--medium-brown);
+}
+
+.total span {
+    display: block;
+    font-size: 2rem;
+    color: var(--dark-brown);
+    font-weight: 700;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.stats div:nth-child(1) {
+    color: black;
+    font-weight: bold;
+}
+
+.stats div:nth-child(2) {
+    font-size: 1rem;
+    color: var(--medium-brown);
+}
